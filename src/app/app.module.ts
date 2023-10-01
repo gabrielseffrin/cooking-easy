@@ -8,6 +8,9 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CardsComponent } from './cards/cards.component';
+import { HomeComponent } from './home/home.component';
+import { ReceitaComponent } from './receita/receita.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,10 @@ import { CardsComponent } from './cards/cards.component';
     FooterComponent,
     HeaderComponent,
     CardsComponent,
+    HomeComponent,
+    ReceitaComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "id_usuario": 1,
+      "nome": "João da Silva",
+      "senha": "senha123",
+      "e_mail": "joao@example.com",
+      "tipo": 1,
+      "foto": "url_da_foto.jpg"
+    }
+  ],
+  "receitas": [
+    {
+      "id_receita": 1,
+      "nome": "Bolo de Cenoura",
+      "id_usuario": 1,
+      "id_avaliacao": 1,
+      "ingredientes": "Farinha, açúcar, chocolate, leite, ovos, Cenoura",
+      "foto": "https://img.cybercook.com.br/receitas/975/bolo-de-cenoura-31.jpeg",
+      "estado_receita": 1,
+      "privacidade_receita": 1
+    },
+    {
+      "id_receita": 2,
+      "nome": "Bolo de Banana",
+      "id_usuario": 1,
+      "id_avaliacao": 1,
+      "ingredientes": "Farinha, açúcar, chocolate, leite, ovos",
+      "foto": "https://assets.unileversolutions.com/recipes-v2/94578.jpg",
+      "estado_receita": 1,
+      "privacidade_receita": 1
+    }
+  ]
+}
