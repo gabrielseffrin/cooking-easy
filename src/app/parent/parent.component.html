@@ -1,0 +1,4 @@
+<p>parent works!</p>
+<h1>Componente Pai</h1>
+<p>Mensagem do componente filho: {{ messageFromChild }}</p>
+<app-child [message]="messageFromParent" (messageToParent)="handleMessageFromChild($event)"></app-child>

@@ -5,7 +5,7 @@
     </div>
     <div class="p-6">
         <h5 class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
-            {{ receita.nome }}
+            {{ receita.nome }} <button (click)="editarItem(receita.id_receita)">Editar</button>
         </h5>
         <p>Ingredientes: {{ receita.ingredientes }}</p>
     </div>
