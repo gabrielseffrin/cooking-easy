@@ -1,7 +1,7 @@
 <div class="container mx-auto mt-10">
     <div class="max-w-md mx-auto">
         <h2 class="text-2xl font-semibold mb-4">Faça o login</h2>
-        <form>
+        <!-- <form>
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium">Email</label>
                 <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg">
@@ -14,5 +14,23 @@
             <button type="submit"
                 class="w-full bg-blue-500 text-white text-sm font-semibold py-2 rounded-lg hover:bg-blue-600">Entrar</button>
         </form>
+    -->
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="name">Nome:</label>
+          <input type="text" id="name" formControlName="name">
+          <div *ngIf="myForm.get('name')?.hasError('pattern')">
+            Nome inválido.
+          </div>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" formControlName="email">
+          <div *ngIf="myForm.get('email')?.hasError('pattern')">
+            Email inválido.
+          </div>
+        </div>
+        <button type="submit" [disabled]="!myForm.valid">Enviar</button>
+      </form>      
     </div>
 </div>
