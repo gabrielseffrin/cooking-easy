@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastrar-receita',
@@ -6,10 +8,40 @@ import { Component } from '@angular/core';
   styleUrls: ['./cadastrar-receita.component.css'],
 })
 export class CadastrarReceitaComponent {
-  receita = { nome: '', ingredientes: '', foto: '' };
+  cadastrarReceita: FormGroup;
 
-  cadastrarReceita() {
-    // Implemente a lógica de cadastro aqui
-    console.log('Receita a ser cadastrada:', this.receita);
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+    this.cadastrarReceita = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.pattern(/^([a-zA-Z\s])+$/)]],
+      ingredientes: [
+        '',
+        [Validators.required, Validators.pattern(/^([a-zA-Z\s])+$/)],
+      ],
+      foto: [
+        '',
+        [Validators.required, Validators.pattern(/^(http|https):\/\/[^0-9]/)],
+      ],
+    });
+  }
+
+  onSubmit() {
+    if (this.cadastrarReceita.valid) {
+      const formData = this.cadastrarReceita.value;
+      console.log(this.cadastrarReceita.value);
+      localStorage.setItem('userData', JSON.stringify(formData));
+
+      const postData = {
+        nome: formData.name,
+      };
+
+      this.http.post('http://localhost:3000/receitas', postData).subscribe(
+        (response) => {
+          console.log('POST bem-sucedido:', response);
+        },
+        (error) => {
+          console.error('Erro ao fazer POST:', error);
+        }
+      );
+    }
   }
 }

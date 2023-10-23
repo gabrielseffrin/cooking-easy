@@ -7,6 +7,10 @@
     {
       "nome": "seffrin",
       "id": 2
+    },
+    {
+      "nome": "f",
+      "id": 3
     }
   ],
   "usuarios": [
@@ -21,6 +25,7 @@
   ],
   "receitas": [
     {
+      "id": "id_receita",
       "id_receita": 1,
       "nome": "Bolo de Cenoura",
       "id_usuario": 1,
@@ -31,6 +36,7 @@
       "privacidade_receita": 1
     },
     {
+      "id": "id_receita",
       "id_receita": 2,
       "nome": "Bolo de Banana",
       "id_usuario": 1,
