@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { EditarReceitaComponent } from './editar-receita/editar-receita.component';
+import { CadastrarReceitaComponent } from './cadastrar-receita/cadastrar-receita.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,9 @@ import { EditarReceitaComponent } from './editar-receita/editar-receita.componen
     ChildComponent,
     ParentComponent,
     EditarReceitaComponent,
+    CadastrarReceitaComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

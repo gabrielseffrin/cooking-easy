@@ -5,13 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ParentComponent } from './parent/parent.component';
 import { EditarReceitaComponent } from './editar-receita/editar-receita.component';
+import { CadastrarReceitaComponent } from './cadastrar-receita/cadastrar-receita.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'pai', component: ParentComponent},
-  { path: 'editar-receita/:id', component: EditarReceitaComponent}
+  { path: 'pai', component: ParentComponent },
+  { path: 'editar-receita/:id', component: EditarReceitaComponent },
+  { path: 'cadastar-receita', component: CadastrarReceitaComponent },
 ];
 
 @NgModule({
