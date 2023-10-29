@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'pai', component: ParentComponent },
   { path: 'editar-receita/:id', component: EditarReceitaComponent },
   { path: 'cadastar-receita', component: CadastrarReceitaComponent },
+  { path: 'cadastrarUsuario', component: CadastroComponent },
 ];
 
 @NgModule({
