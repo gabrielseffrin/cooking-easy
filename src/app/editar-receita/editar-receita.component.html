@@ -1,9 +1,12 @@
-<p>editar-receita works!</p>
-<h2>Editar Item</h2>
-<p>ID do Item: {{ itemId }}</p>
+<div class="m-4 flex">
+  <img class="h-80 w-6/12 md:h-full md:w-6/12 md:rounded-none md:rounded-l-lg rounded-l-lg object-cover" src='{{
+    receita.foto}}' alt="" />
 
-<div *ngIf="receita">
-  <h2>Dados</h2>
-  <p>ID: {{ receita.id_receita }}</p>
-  <p>Nome: {{ receita.nome }}</p>
+  <div
+    class="flex flex-col items-center rounded-r-lg border border-gray-200 bg-white shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 md:max-h-full md:flex-row w-3/4">
+    <div class="flex flex-col justify-between p-4 leading-normal w-full">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ receita.nome }}</h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ receita.ingredientes }}</p>
+    </div>
+  </div>
 </div>

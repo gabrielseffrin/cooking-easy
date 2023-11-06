@@ -7,6 +7,10 @@
     {
       "nome": "seffrin",
       "id": 2
+    },
+    {
+      "nome": "main",
+      "id": 3
     }
   ],
   "usuarios": [
@@ -61,8 +65,7 @@
   ],
   "receitas": [
     {
-      "id": "id_receita",
-      "id_receita": 1,
+      "id": 1,
       "nome": "Bolo de Cenoura",
       "id_usuario": 1,
       "id_avaliacao": 1,
@@ -72,8 +75,7 @@
       "privacidade_receita": 1
     },
     {
-      "id": "id_receita",
-      "id_receita": 2,
+      "id": 2,
       "nome": "Bolo de Banana",
       "id_usuario": 1,
       "id_avaliacao": 1,
@@ -88,7 +90,7 @@
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
       "estado_receita": 1,
       "privacidade_receita": 1,
-      "id": "d7EnWn9"
+      "id": 3
     }
   ]
 }

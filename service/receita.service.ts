@@ -14,4 +14,9 @@ export class ReceitaService {
   getReceitas(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+
+  getReceitaPorId(id: Number): Observable<any[]> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<any[]>(url);
+  }
 }

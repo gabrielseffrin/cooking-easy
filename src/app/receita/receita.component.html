@@ -1,12 +1,12 @@
 <div
-    class="block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+    class="block max-w-[18rem] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-marrom">
     <div class="relative overflow-hidden bg-cover bg-no-repeat">
         <img class="rounded-t-lg" [src]="receita.foto" alt="{{ receita.nome }}" />
     </div>
     <div class="p-6">
         <h5 class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
-            {{ receita.nome }} <button (click)="editarItem(receita.id_receita)">Editar</button>
+            {{ receita.nome }} <button (click)="editarItem(receita.id)">Editar</button>
         </h5>
-        <p>Ingredientes: {{ receita.ingredientes }}</p>
+        <p class="dark:text-neutral-50">Ingredientes: {{ receita.ingredientes }}</p>
     </div>
 </div>
