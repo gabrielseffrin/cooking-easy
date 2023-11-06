@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -10,7 +11,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
   myForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
+    private router: Router
+  ) {
     this.myForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.pattern(/^([a-zA-Z\s])+$/)]],
       email: [
@@ -32,15 +37,10 @@ export class LoginComponent {
       const postData = {
         nome: formData.name,
       };
-
-      this.http.post('http://localhost:3000/teste', postData).subscribe(
-        (response) => {
-          console.log('POST bem-sucedido:', response);
-        },
-        (error) => {
-          console.error('Erro ao fazer POST:', error);
-        }
-      );
     }
+  }
+
+  refreshPage() {
+    this.router.navigate([this.router.url]);
   }
 }
