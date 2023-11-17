@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cookease",
+            "outputPath": "dist/cooking-easy",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "cookease:build:production"
+              "browserTarget": "cooking-easy:build:production"
             },
             "development": {
-              "browserTarget": "cookease:build:development"
+              "browserTarget": "cooking-easy:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cookease:build"
+            "browserTarget": "cooking-easy:build"
           }
         },
         "test": {
