@@ -1,74 +1,12 @@
 {
-  "teste": [
-    {
-      "id": 1,
-      "nome": "Cesar"
-    },
-    {
-      "nome": "seffrin",
-      "id": 2
-    },
-    {
-      "nome": "main",
-      "id": 3
-    },
-    {
-      "nome": "main",
-      "id": 4
-    },
-    {
-      "nome": "main",
-      "id": 5
-    }
-  ],
   "usuarios": [
     {
-      "id_usuario": 1,
       "id": 1,
       "nome": "João da Silva",
       "senha": "senha123",
       "email": "joao@example.com",
       "tipo": 1,
       "foto": "url_da_foto.jpg"
-    },
-    {
-      "nome": "main",
-      "foto": "https://i.imgur.com/h7WUdvz.jpeg",
-      "email": "123@gmail.com",
-      "tipo": 1,
-      "id": 2
-    },
-    {
-      "nome": "g",
-      "foto": "https://i.imgur.com/h7WUdvz.jpeg",
-      "email": "123@gmail.com",
-      "tipo": 1,
-      "cep": "85118000",
-      "id": 3
-    },
-    {
-      "nome": "grrr",
-      "foto": "https://i.imgur.com/h7WUdvz.jpeg",
-      "email": "123@gmail.com",
-      "tipo": 1,
-      "cep": "85118000",
-      "id": 4
-    },
-    {
-      "nome": "main",
-      "foto": "https://i.imgur.com/h7WUdvz.jpeg",
-      "email": "123@gmail.com",
-      "tipo": 1,
-      "cep": "85118000",
-      "id": 5
-    },
-    {
-      "nome": "main",
-      "foto": "https://i.imgur.com/h7WUdvz.jpeg",
-      "email": "123@gmail.com",
-      "tipo": 1,
-      "cep": "85118000",
-      "id": 6
     }
   ],
   "receitas": [
@@ -99,6 +37,30 @@
       "estado_receita": 1,
       "privacidade_receita": 1,
       "id": 3
+    },
+    {
+      "nome": "privada",
+      "ingredientes": "dasdasd asd asd asds",
+      "foto": "https://i.imgur.com/h7WUdvz.jpeg",
+      "estado_receita": 1,
+      "privacidade_receita": 2,
+      "id": 4
+    },
+    {
+      "nome": "privada pendente",
+      "ingredientes": "dasdasd asd asd asds",
+      "foto": "https://i.imgur.com/h7WUdvz.jpeg",
+      "estado_receita": 2,
+      "privacidade_receita": 2,
+      "id": 5
+    },
+    {
+      "nome": "normal pendente",
+      "ingredientes": "dasdasd asd asd asds",
+      "foto": "https://i.imgur.com/h7WUdvz.jpeg",
+      "estado_receita": 2,
+      "privacidade_receita": 1,
+      "id": 6
     }
   ]
 }

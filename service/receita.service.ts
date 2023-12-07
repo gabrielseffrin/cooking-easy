@@ -12,11 +12,22 @@ export class ReceitaService {
 
   // buscar todas as receitas
   getReceitas(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+    const url = `${this.apiUrl}?estado_receita=${1}&privacidade_receita=${1}`;
+    return this.http.get<any[]>(url);
   }
 
   getReceitaPorId(id: Number): Observable<any[]> {
     const url = `${this.apiUrl}/${id}`;
+    return this.http.get<any[]>(url);
+  }
+
+  getReceitasPrivadas(): Observable<any[]> {
+    const url = `${this.apiUrl}?estado_receita=${1}&privacidade_receita=${2}`;
+    return this.http.get<any[]>(url);
+  }
+
+  getReceitasPendentes(): Observable<any[]> {
+    const url = `${this.apiUrl}?estado_receita=${2}`;
     return this.http.get<any[]>(url);
   }
 }

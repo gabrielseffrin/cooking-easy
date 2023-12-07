@@ -11,13 +11,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
   myForm: FormGroup;
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private http: HttpClient,
-    private router: Router
-  ) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.myForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.pattern(/^([a-zA-Z\s])+$/)]],
       email: [
         '',
         [

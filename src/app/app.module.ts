@@ -16,6 +16,7 @@ import { ParentComponent } from './parent/parent.component';
 import { EditarReceitaComponent } from './editar-receita/editar-receita.component';
 import { FormsModule } from '@angular/forms';
 import { CadastrarReceitaComponent } from './cadastrar-receita/cadastrar-receita.component';
+import { AprovarReceitaComponent } from './aprovar-receita/aprovar-receita.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CadastrarReceitaComponent } from './cadastrar-receita/cadastrar-receita
     ParentComponent,
     EditarReceitaComponent,
     CadastrarReceitaComponent,
+    AprovarReceitaComponent,
   ],
   imports: [
     BrowserModule,
