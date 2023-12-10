@@ -7,12 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./receita.component.css'],
 })
 export class ReceitaComponent {
-  
   @Input() receita: any;
 
   constructor(private router: Router) {}
 
-  editarItem(itemId: number) {
-    this.router.navigate(['/editar-receita/', itemId]);
+  visualizar(itemId: number) {
+    this.router.navigate(['/visualizar/', itemId]);
   }
 }

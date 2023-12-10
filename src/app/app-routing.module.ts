@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'pai', component: ParentComponent },
-  { path: 'editar-receita/:id', component: EditarReceitaComponent },
+  { path: 'visualizar/:id', component: EditarReceitaComponent },
   { path: 'cadastar-receita', component: CadastrarReceitaComponent },
   { path: 'cadastrarUsuario', component: CadastroComponent },
   { path: 'aprovar-receita', component: AprovarReceitaComponent },

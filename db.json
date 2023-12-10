@@ -44,7 +44,7 @@
       "id_usuario": 2,
       "ingredientes": "dasdasd asd asd asds",
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
-      "estado_receita": 1,
+      "estado_receita": 2,
       "privacidade_receita": 2,
       "id": 4
     },
@@ -53,7 +53,7 @@
       "id_usuario": 2,
       "ingredientes": "dasdasd asd asd asds",
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
-      "estado_receita": 2,
+      "estado_receita": 3,
       "privacidade_receita": 2,
       "id": 5
     },
@@ -62,7 +62,7 @@
       "id_usuario": 2,
       "ingredientes": "dasdasd asd asd asds",
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
-      "estado_receita": 2,
+      "estado_receita": 1,
       "privacidade_receita": 1,
       "id": 6
     },

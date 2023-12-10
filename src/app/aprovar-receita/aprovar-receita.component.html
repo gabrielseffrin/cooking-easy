@@ -1,5 +1,26 @@
 <div class="container mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-3">
-        <app-receita *ngFor="let receita of listaDeReceitas" [receita]="receita"></app-receita>
+        <ng-container *ngFor="let receita of listaDeReceitas">
+            <div
+                class="block max-w-[18rem] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-marrom m-2">
+                <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                    <img class="rounded-t-lg" [src]="receita.foto" alt="{{ receita.nome }}" />
+                </div>
+                <div class="p-4">
+                    <h5 class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                        {{ receita.nome }}
+                    </h5>
+                    <p class="dark:text-neutral-50">Ingredientes: {{ receita.ingredientes }}</p>
+                </div>
+                <div class="flex justify-between p-4">
+                    <button
+                        class="flex-1 py-2 bg-green-200 text-green-800 rounded-md hover:bg-green-300 transition duration-300"
+                        (click)="aprovarReceita(receita.id, 1)">Aprovar</button>
+                    <button
+                        class="flex-1 py-2 bg-red-200 text-red-800 rounded-md hover:bg-red-300 transition duration-300 ml-2"
+                        (click)="aprovarReceita(receita.id, 2)">Recusar</button>
+                </div>
+            </div>
+        </ng-container>
     </div>
 </div>

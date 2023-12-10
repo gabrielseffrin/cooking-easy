@@ -35,4 +35,9 @@ export class ReceitaService {
     const url = `${this.apiUrl}?id_usuario=${2}`;
     return this.http.get<any[]>(url);
   }
+
+  updateEstadoReceita(id: number, novoEstado: number): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.patch<any>(url, { estado_receita: novoEstado });
+  }
 }

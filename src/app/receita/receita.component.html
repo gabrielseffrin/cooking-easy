@@ -1,12 +1,15 @@
 <div
-    class="block max-w-[18rem] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-marrom">
+    class="block max-w-[18rem] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-marrom m-2">
     <div class="relative overflow-hidden bg-cover bg-no-repeat">
         <img class="rounded-t-lg" [src]="receita.foto" alt="{{ receita.nome }}" />
     </div>
     <div class="p-6">
         <h5 class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
-            {{ receita.nome }} <button (click)="editarItem(receita.id)">| Conferir Receita</button>
+            {{ receita.nome }}
         </h5>
         <p class="dark:text-neutral-50">Ingredientes: {{ receita.ingredientes }}</p>
+        <hr>
+        <button class="mt-2 bg-white text-black px-4 py-2 rounded-md shadow-md hover:shadow-lg"
+            (click)="visualizar(receita.id)">Conferir Receita</button>
     </div>
 </div>
