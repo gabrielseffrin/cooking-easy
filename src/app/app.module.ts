@@ -17,6 +17,7 @@ import { EditarReceitaComponent } from './editar-receita/editar-receita.componen
 import { FormsModule } from '@angular/forms';
 import { CadastrarReceitaComponent } from './cadastrar-receita/cadastrar-receita.component';
 import { AprovarReceitaComponent } from './aprovar-receita/aprovar-receita.component';
+import { MinhaReceitaComponent } from './minha-receita/minha-receita.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AprovarReceitaComponent } from './aprovar-receita/aprovar-receita.compo
     EditarReceitaComponent,
     CadastrarReceitaComponent,
     AprovarReceitaComponent,
+    MinhaReceitaComponent,
   ],
   imports: [
     BrowserModule,

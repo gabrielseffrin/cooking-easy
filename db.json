@@ -32,6 +32,7 @@
     },
     {
       "nome": "asdasd",
+      "id_usuario": 1,
       "ingredientes": "dasdasd asd asd asds",
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
       "estado_receita": 1,
@@ -40,6 +41,7 @@
     },
     {
       "nome": "privada",
+      "id_usuario": 2,
       "ingredientes": "dasdasd asd asd asds",
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
       "estado_receita": 1,
@@ -48,6 +50,7 @@
     },
     {
       "nome": "privada pendente",
+      "id_usuario": 2,
       "ingredientes": "dasdasd asd asd asds",
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
       "estado_receita": 2,
@@ -56,6 +59,7 @@
     },
     {
       "nome": "normal pendente",
+      "id_usuario": 2,
       "ingredientes": "dasdasd asd asd asds",
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
       "estado_receita": 2,

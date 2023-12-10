@@ -7,6 +7,7 @@ import { ParentComponent } from './parent/parent.component';
 import { EditarReceitaComponent } from './editar-receita/editar-receita.component';
 import { CadastrarReceitaComponent } from './cadastrar-receita/cadastrar-receita.component';
 import { AprovarReceitaComponent } from './aprovar-receita/aprovar-receita.component';
+import { MinhaReceitaComponent } from './minha-receita/minha-receita.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'cadastar-receita', component: CadastrarReceitaComponent },
   { path: 'cadastrarUsuario', component: CadastroComponent },
   { path: 'aprovar-receita', component: AprovarReceitaComponent },
+  { path: 'minha-receita', component: MinhaReceitaComponent },
 ];
 
 @NgModule({

@@ -30,4 +30,9 @@ export class ReceitaService {
     const url = `${this.apiUrl}?estado_receita=${2}`;
     return this.http.get<any[]>(url);
   }
+
+  getReceitasLogado(): Observable<any[]> {
+    const url = `${this.apiUrl}?id_usuario=${2}`;
+    return this.http.get<any[]>(url);
+  }
 }
