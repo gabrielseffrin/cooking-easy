@@ -28,14 +28,15 @@ export class CadastrarReceitaComponent {
     if (this.cadastrarReceita.valid) {
       const formData = this.cadastrarReceita.value;
       console.log(this.cadastrarReceita.value);
+
       localStorage.setItem('userData', JSON.stringify(formData));
 
       const postData = {
         nome: formData.name,
         ingredientes: formData.ingredientes,
         foto: formData.foto,
-        estado_receita: 1,
-        privacidade_receita: 1,
+        estado_receita: 2,
+        privacidade_receita: formData.privacidade,
       };
 
       this.http.post('http://localhost:3000/receitas', postData).subscribe(
