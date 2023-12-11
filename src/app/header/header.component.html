@@ -25,20 +25,19 @@
                 <span
                     class="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 "
                     id="basic-addon2">
-                    <a routerLink="/login">Login -></a>
+                    <div *ngIf="authService.isAuthenticatedUser(); else loginTemplate">
+                        <!-- Conteúdo exibido quando o usuário está autenticado -->
+                        <h2>Bem-vindo, {{ authService.getAuthenticatedUser() }}!</h2>
+                        <button (click)="logout()">Logout</button>
+                    </div>
+                    <ng-template #loginTemplate>
+                        <a routerLink="/login">Login -></a>
+                    <!-- Conteúdo exibido quando o usuário NÃO está autenticado -->
+                    </ng-template>
                 </span>
+
+                
             </div>
         </div>
     </nav>
-    <div class="container mx-auto my-1">
-        <div class="max-w-md mx-auto">
-            <button class="button ">
-                <a routerLink="/cadastar-receita">Cadastrar Receita</a>
-            </button>
-
-            <button class="button" routerLink="/minha-receita" *ngIf="isUserLoggedIn">
-                Minhas Receitas
-            </button>
-        </div>
-    </div>
 </header>

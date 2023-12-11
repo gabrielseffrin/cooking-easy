@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +9,13 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   isUserLoggedIn: boolean;
 
-  constructor() {
+  constructor(public authService: AuthService) {
     // Verifique se os dados do usuário estão no localStorage
     const userData = localStorage.getItem('userData');
     this.isUserLoggedIn = userData !== null;
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

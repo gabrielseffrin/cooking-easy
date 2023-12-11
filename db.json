@@ -7,6 +7,14 @@
       "email": "joao@example.com",
       "tipo": 1,
       "foto": "url_da_foto.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Cesar Abre",
+      "senha": "123",
+      "email": "cesar",
+      "tipo": 1,
+      "foto": "url_da_foto.jpg"
     }
   ],
   "receitas": [
