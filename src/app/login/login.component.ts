@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,33 +10,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  myForm: FormGroup;
+  email: string = '';
+  password: string = '';
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {
-    this.myForm = this.formBuilder.group({
-      email: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/),
-        ],
-      ],
+  constructor(private authService: AuthService) {}
+
+  login() {
+    this.authService.login(this.email, this.password).subscribe((success) => {
+      if (success) {
+        console.log('Login successful');
+      } else {
+        console.log('Login failed');
+      }
     });
-  }
-
-  onSubmit() {
-    if (this.myForm.valid) {
-      const formData = this.myForm.value;
-      console.log(this.myForm.value);
-      localStorage.setItem('userData', JSON.stringify(formData));
-
-      const postData = {
-        nome: formData.name,
-      };
-    }
-  }
-
-  refreshPage() {
-    this.router.navigate([this.router.url]);
   }
 }

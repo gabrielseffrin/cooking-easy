@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { CadastrarReceitaComponent } from './cadastrar-receita/cadastrar-receita.component';
 import { AprovarReceitaComponent } from './aprovar-receita/aprovar-receita.component';
 import { MinhaReceitaComponent } from './minha-receita/minha-receita.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { MinhaReceitaComponent } from './minha-receita/minha-receita.component';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
