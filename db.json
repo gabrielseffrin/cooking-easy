@@ -21,18 +21,12 @@
       "privacidade_receita": 1
     },
     {
-      "nome": "teste",
+      "nome": "Macarronada",
       "ingredientes": "teste",
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
       "estado_receita": 1,
       "id_usuario": 2,
       "id": 2
-    },
-    {
-      "nome": "t",
-      "estado_receita": 1,
-      "id": 3,
-      "id_usuario": 2
     }
   ]
 }
