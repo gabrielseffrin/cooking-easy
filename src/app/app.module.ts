@@ -43,7 +43,6 @@ import { EditarComponent } from './editar/editar.component';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
