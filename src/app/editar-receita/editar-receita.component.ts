@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { ReceitaService } from 'service/receita.service';
 
 @Component({
   selector: 'app-editar-receita',
@@ -12,11 +11,7 @@ export class EditarReceitaComponent implements OnInit {
   itemId: number = 0;
   receita: any;
 
-  constructor(
-    private route: ActivatedRoute,
-    private http: HttpClient,
-    private receitaService: ReceitaService
-  ) {}
+  constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {

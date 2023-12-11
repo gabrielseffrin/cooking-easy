@@ -8,6 +8,7 @@ import { EditarReceitaComponent } from './editar-receita/editar-receita.componen
 import { CadastrarReceitaComponent } from './cadastrar-receita/cadastrar-receita.component';
 import { AprovarReceitaComponent } from './aprovar-receita/aprovar-receita.component';
 import { MinhaReceitaComponent } from './minha-receita/minha-receita.component';
+import { EditarComponent } from './editar/editar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   { path: 'pai', component: ParentComponent },
   { path: 'visualizar/:id', component: EditarReceitaComponent },
+  { path: 'editar/:id', component: EditarComponent },
   { path: 'cadastar-receita', component: CadastrarReceitaComponent },
   { path: 'cadastrarUsuario', component: CadastroComponent },
   { path: 'aprovar-receita', component: AprovarReceitaComponent },

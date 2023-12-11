@@ -40,4 +40,11 @@ export class ReceitaService {
     const url = `${this.apiUrl}/${id}`;
     return this.http.patch<any>(url, { estado_receita: novoEstado });
   }
+
+  atualizarReceita(id: number, nomeReceita: string): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.patch<any>(url, {
+      nome: nomeReceita,
+    });
+  }
 }

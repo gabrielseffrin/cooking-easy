@@ -11,5 +11,10 @@
         <hr>
         <button class="mt-2 bg-white text-black px-4 py-2 rounded-md shadow-md hover:shadow-lg"
             (click)="visualizar(receita.id)">Conferir Receita</button>
+
+        <button *ngIf="botaoEditar" class="ml-2 mt-2 bg-white text-black px-4 py-2 rounded-md shadow-md hover:shadow-lg"
+            (click)="editar(receita.id)">
+            Editar
+        </button>
     </div>
 </div>
