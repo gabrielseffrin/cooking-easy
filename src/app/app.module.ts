@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { CadastrarReceitaComponent } from './cadastrar-receita/cadastrar-receita.component';
 import { AprovarReceitaComponent } from './aprovar-receita/aprovar-receita.component';
 import { MinhaReceitaComponent } from './minha-receita/minha-receita.component';
+import { EditarComponent } from './editar/editar.component';
 
 @NgModule({
   declarations: [
