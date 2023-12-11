@@ -8,10 +8,17 @@ import { Router } from '@angular/router';
 })
 export class ReceitaComponent {
   @Input() receita: any;
+  botaoEditar = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.botaoEditar = this.router.url.includes('/minha-receita');
+  }
 
   visualizar(itemId: number) {
     this.router.navigate(['/visualizar/', itemId]);
+  }
+
+  editar(itemId: number) {
+    this.router.navigate(['/editar/', itemId]);
   }
 }
