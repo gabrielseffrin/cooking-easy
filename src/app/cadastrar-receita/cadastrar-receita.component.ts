@@ -36,7 +36,7 @@ export class CadastrarReceitaComponent {
         ingredientes: formData.ingredientes,
         foto: formData.foto,
         estado_receita: 2,
-        privacidade_receita: formData.privacidade,
+        privacidade_receita: 1,
       };
 
       this.http.post('http://localhost:3000/receitas', postData).subscribe(

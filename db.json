@@ -29,12 +29,31 @@
       "privacidade_receita": 1
     },
     {
-      "nome": "Macarronada",
-      "ingredientes": "teste",
-      "foto": "https://i.imgur.com/h7WUdvz.jpeg",
+      "nome": "macarrao",
+      "ingredientes": "500 g de penne cozido al dente, 2 colheres (sopa) de azeite, 1 lata de molho de tomate",
+      "foto": "https://static.itdg.com.br/images/640-400/bd13f1b73e77535c24a9b29b84c36a10/323878-original.jpg",
       "estado_receita": 1,
       "id_usuario": 2,
-      "id": 2
+      "id": 2,
+      "privacidade_receita": 1
+    },
+    {
+      "nome": "feijao",
+      "ingredientes": "feijao",
+      "foto": "https://cdn.awsli.com.br/1420/1420494/produto/89497775/f1d2fd3cfc.jpg",
+      "estado_receita": 1,
+      "id_usuario": 2,
+      "id": 3,
+      "privacidade_receita": 1
+    },
+    {
+      "nome": "Misto quente",
+      "ingredientes": "asdas",
+      "foto": "https://www.receiteria.com.br/wp-content/uploads/receitas-de-misto-quente-1.jpg",
+      "estado_receita": 1,
+      "id": 4,
+      "privacidade_receita": 1
+      
     }
   ]
 }

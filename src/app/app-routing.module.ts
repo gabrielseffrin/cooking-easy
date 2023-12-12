@@ -9,6 +9,7 @@ import { CadastrarReceitaComponent } from './cadastrar-receita/cadastrar-receita
 import { AprovarReceitaComponent } from './aprovar-receita/aprovar-receita.component';
 import { MinhaReceitaComponent } from './minha-receita/minha-receita.component';
 import { EditarComponent } from './editar/editar.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,11 +17,11 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   { path: 'pai', component: ParentComponent },
   { path: 'visualizar/:id', component: EditarReceitaComponent },
-  { path: 'editar/:id', component: EditarComponent },
-  { path: 'cadastar-receita', component: CadastrarReceitaComponent },
-  { path: 'cadastrarUsuario', component: CadastroComponent },
-  { path: 'aprovar-receita', component: AprovarReceitaComponent },
-  { path: 'minha-receita', component: MinhaReceitaComponent },
+  { path: 'editar/:id', component: EditarComponent, canActivate: [AuthGuard] },
+  { path: 'cadastar-receita', component: CadastrarReceitaComponent, canActivate: [AuthGuard]  },
+  { path: 'cadastrarUsuario', component: CadastroComponent, canActivate: [AuthGuard]  },
+  { path: 'aprovar-receita', component: AprovarReceitaComponent, canActivate: [AuthGuard]  },
+  { path: 'minha-receita', component: MinhaReceitaComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
