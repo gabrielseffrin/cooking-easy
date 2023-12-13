@@ -32,17 +32,17 @@
                     </div>
                     <ng-template #loginTemplate>
                         <a routerLink="/login">Login -></a>
-                    <!-- Conteúdo exibido quando o usuário NÃO está autenticado -->
+                        <!-- Conteúdo exibido quando o usuário NÃO está autenticado -->
                     </ng-template>
                 </span>
 
-                
 
-                
+
+
             </div>
-            
+
         </div>
-        
+
     </nav>
     <div *ngIf="authService.isAuthenticatedUser();" class="container mx-auto my-1">
         <div class="max-w-md mx-auto">
