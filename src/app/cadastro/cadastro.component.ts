@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -10,13 +11,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CadastroComponent {
   myForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) {
     this.myForm = this.formBuilder.group({
+      password: ['', [Validators.required, Validators.minLength(3)]],
       name: ['', [Validators.required, Validators.pattern(/^([a-zA-Z\s])+$/)]],
       email: [
         '',
         [
-          
+          Validators.required,
           Validators.pattern(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/),
         ],
       ],
@@ -29,7 +31,6 @@ export class CadastroComponent {
   }
 
   async fetchAPI(cep: string) {
-    console.log(cep);
     try {
       const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
       if (!response.ok) {
@@ -49,12 +50,11 @@ export class CadastroComponent {
 
   async onSubmit() {
 
-    
-
+    console.log('onsubmit')
     if (this.myForm.valid) {
-      console.log('onsubmit')
+      
+      console.log('valido')
       const formData = this.myForm.value;
-      console.log(this.myForm.value);
       localStorage.setItem('userData', JSON.stringify(formData));
 
       const cepControl = this.myForm.get('cep');
@@ -69,7 +69,7 @@ export class CadastroComponent {
             nome: formData.name,
             foto: formData.foto,
             email: formData.email,
-            password: formData.password,
+            senha: formData.password,
             tipo: 1,
             cep: formData.cep,
           };
@@ -77,6 +77,7 @@ export class CadastroComponent {
           this.http.post('http://localhost:3000/usuarios', postData).subscribe(
             (response) => {
               console.log('POST bem-sucedido:', response);
+              this.router.navigate(['/login']);
             },
             (error) => {
               console.error('Erro ao fazer POST:', error);

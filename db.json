@@ -31,6 +31,15 @@
       "tipo": 1,
       "cep": "85040070",
       "id": 3
+    },
+    {
+      "nome": "lucca",
+      "foto": "https://i0.wp.com/tortamaria.com/wp-content/uploads/2022/06/BCenoura.png?fit=1024%2C1024&ssl=1",
+      "email": "lucca@gmail.com",
+      "senha": "123",
+      "tipo": 1,
+      "cep": "85040070",
+      "id": 4
     }
   ],
   "receitas": [
