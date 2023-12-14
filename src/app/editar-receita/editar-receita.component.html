@@ -1,13 +1,45 @@
-<div class="m-4 flex">
-  <img class="h-80 w-6/12 md:h-full md:w-6/12 md:rounded-none md:rounded-l-lg rounded-l-lg object-cover" src='{{
-    receita.foto}}' alt="" />
-
-  <div
-    class="flex flex-col items-center rounded-r-lg border border-gray-200 bg-white shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 md:max-h-full md:flex-row w-3/4">
-    <div class="flex flex-col justify-between p-4 leading-normal w-full">
-      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ receita.nome }}</h5>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ receita.ingredientes }}</p>
+<div class="container mx-auto">
+  <div class="flex flex-col md:flex-row">
+    <!-- Card com Imagem -->
+    <div class="md:w-1/2 p-6">
+      <img class="h-80 w-full md:h-full rounded-l-lg object-cover" [src]="receita.foto" alt="" />
     </div>
 
+    <!-- Card de Conteúdo -->
+    <div class="md:w-1/2 md:order-2 p-6">
+      <div class="h-80 md:h-full bg-white shadow-lg p-4 rounded-lg text-black">
+        <h3 class="text-4xl font-bold mb-2">{{ receita.nome }}</h3>
+        <hr>
+        <p class="text-2xl mb-2">Ingredientes</p>
+        <p class="text-gray-700 dark:text-gray-400">{{ receita.ingredientes }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formulário de Comentário -->
+  <div class="mt-6 md:mt-20 mb-8">
+    <h5 class="text-2xl mb-2">Adicione um Comentário</h5>
+    <form (ngSubmit)="onSubmit()" class="bg-white shadow-lg p-4 rounded-lg md:w-1/2 mt-6">
+      <input type="text" id="nome" name="nome" placeholder="Seu Nome" class="w-full px-4 py-2 mb-2 border rounded-lg"
+        [(ngModel)]="novoComentario.nome" required>
+      <textarea id="comentario" name="comentario" placeholder="Comentário"
+        class="w-full px-4 py-2 mb-2 border rounded-lg" [(ngModel)]="novoComentario.comentario" required></textarea>
+      <button type="submit"
+        class="w-full bg-blue-500 text-white text-sm font-semibold py-2 rounded-lg hover:bg-blue-600">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Comentários -->
+  <hr>
+  <div class="mt-8">
+    <h5 class="text-2xl mb-2">Comentários</h5>
+
+    <div class="mt-6" *ngFor="let comentario of listaDeComentarios">
+      <!-- Estrutura de exibição de cada comentário -->
+      <div class="bg-gray-100 p-4 rounded-lg mb-2">
+        <!-- Exibir detalhes do comentário -->
+        <p><strong>{{ comentario.nome }}</strong>: {{ comentario.comentario }}</p>
+      </div>
+    </div>
   </div>
 </div>
