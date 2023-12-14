@@ -53,7 +53,7 @@
     {
       "nome": "gabriel",
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
-      "email": "gabrielseffrin29@gmail.com",
+      "email": "gabriel",
       "senha": "123",
       "tipo": 1,
       "cep": "85118000",
@@ -99,16 +99,16 @@
       "id_usuario": 2,
       "id": 3,
       "privacidade_receita": 1,
-      "nome_usuario": "gabrielseffrin29@gmail.com"
+      "nome_usuario": "gabriel"
     },
     {
-      "nome": "Misto quente",
-      "ingredientes": "asdas",
+      "nome": "Misto Molhado",
+      "ingredientes": "Pão",
       "foto": "https://www.receiteria.com.br/wp-content/uploads/receitas-de-misto-quente-1.jpg",
       "estado_receita": 1,
       "id": 4,
       "privacidade_receita": 1,
-      "nome_usuario": "gabrielseffrin29@gmail.com"
+      "nome_usuario": "gabriel"
     },
     {
       "nome": "teste logado",
@@ -116,7 +116,7 @@
       "foto": "https://i.imgur.com/h7WUdvz.jpeg",
       "estado_receita": 2,
       "privacidade_receita": 1,
-      "nome_usuario": "gabrielseffrin29@gmail.com",
+      "nome_usuario": "gabriel",
       "id": 5
     },
     {
@@ -127,6 +127,15 @@
       "privacidade_receita": 1,
       "nome_usuario": "teste@teste.com",
       "id": 6
+    },
+    {
+      "nome": "Teste Gabriel Logado",
+      "ingredientes": "asdasd asd asd asdasd",
+      "foto": "https://i.imgur.com/h7WUdvz.jpeg",
+      "estado_receita": 1,
+      "privacidade_receita": 1,
+      "nome_usuario": "gabriel",
+      "id": 7
     }
   ],
   "comentarios": [
@@ -147,6 +156,12 @@
       "comentario": "Muito bom! Excelente bolo",
       "id_receita": 1,
       "id": 35
+    },
+    {
+      "nome": "Nome Teste",
+      "comentario": "muito bom!",
+      "id_receita": 4,
+      "id": 36
     }
   ]
 }
