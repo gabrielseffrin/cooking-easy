@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReceitaService } from 'service/receita.service';
@@ -19,7 +19,8 @@ export class EditarReceitaComponent implements OnInit {
     private route: ActivatedRoute,
     private http: HttpClient,
     private formBuilder: FormBuilder,
-    private receitaService: ReceitaService
+    private receitaService: ReceitaService,
+    private router: Router
   ) {}
 
   onSubmit() {
@@ -32,6 +33,7 @@ export class EditarReceitaComponent implements OnInit {
     this.http.post('http://localhost:3000/comentarios', postData).subscribe(
       (response) => {
         console.log('POST bem-sucedido:', response);
+        this.router.navigate([`/visualizar/${this.itemId}`])
       },
       (error) => {
         console.error('Erro ao fazer POST:', error);

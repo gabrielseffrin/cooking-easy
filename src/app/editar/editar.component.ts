@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ReceitaService } from 'service/receita.service';
 
 @Component({
@@ -18,10 +18,11 @@ export class EditarComponent {
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private route: ActivatedRoute,
-    private receitaService: ReceitaService
+    private receitaService: ReceitaService,
+    private router: Router
   ) {
     this.editarReceita = this.formBuilder.group({
-      name: ['', Validators.required],
+      name: [''],
       ingredientes: [''],
     });
   }
@@ -49,10 +50,11 @@ export class EditarComponent {
 
       // Chama o método do serviço de receitas para atualizar a receita com os dados do formulário
       this.receitaService
-        .atualizarReceita(this.itemId, formData.name)
+        .atualizarReceita(this.itemId, formData.name, formData.ingredientes)
         .subscribe(
           (data) => {
             console.log('Receita atualizada com sucesso:', data);
+            this.router.navigate(['/minha-receita']);
             // Lógica adicional após a atualização
           },
           (error) => {

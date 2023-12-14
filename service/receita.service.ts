@@ -46,10 +46,11 @@ export class ReceitaService {
     return this.http.get<any[]>(url);
   }
 
-  atualizarReceita(id: number, nomeReceita: string): Observable<any> {
+  atualizarReceita(id: number, nomeReceita: string, ingredientes: string): Observable<any> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.patch<any>(url, {
       nome: nomeReceita,
+      ingredientes: ingredientes,
     });
   }
 }

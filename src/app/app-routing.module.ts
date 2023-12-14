@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'pai', component: ParentComponent },
   { path: 'visualizar/:id', component: EditarReceitaComponent },
   { path: 'editar/:id', component: EditarComponent, canActivate: [AuthGuard] },
-  { path: 'cadastar-receita', component: CadastrarReceitaComponent, canActivate: [AuthGuard]  },
+  { path: 'cadastrar-receita', component: CadastrarReceitaComponent, canActivate: [AuthGuard]  },
   { path: 'cadastrarUsuario', component: CadastroComponent},
   { path: 'aprovar-receita', component: AprovarReceitaComponent, canActivate: [AuthGuard]  },
   { path: 'minha-receita', component: MinhaReceitaComponent, canActivate: [AuthGuard] },
