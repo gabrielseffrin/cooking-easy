@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="mb-4">
-                <label for="cep" class="block text-sm font-medium">URL da cep:</label>
+                <label for="cep" class="block text-sm font-medium">CEP:</label>
                 <input type="text" id="cep" name="cep" formControlName="cep" class="w-full px-4 py-2 border rounded-lg">
                 <div *ngIf="myForm.get('cep')?.hasError('pattern')" class="text-red-500">
                     CEP inválido.

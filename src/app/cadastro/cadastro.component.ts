@@ -16,7 +16,7 @@ export class CadastroComponent {
       email: [
         '',
         [
-          Validators.required,
+          
           Validators.pattern(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/),
         ],
       ],
@@ -48,7 +48,11 @@ export class CadastroComponent {
   }
 
   async onSubmit() {
+
+    
+
     if (this.myForm.valid) {
+      console.log('onsubmit')
       const formData = this.myForm.value;
       console.log(this.myForm.value);
       localStorage.setItem('userData', JSON.stringify(formData));

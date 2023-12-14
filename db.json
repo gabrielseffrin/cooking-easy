@@ -15,6 +15,22 @@
       "email": "cesar",
       "tipo": 1,
       "foto": "url_da_foto.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Cesar Abre",
+      "senha": "123",
+      "email": "joao",
+      "tipo": 1,
+      "foto": "url_da_foto.jpg"
+    },
+    {
+      "nome": "felip",
+      "foto": "https://i0.wp.com/tortamaria.com/wp-content/uploads/2022/06/BCenoura.png?fit=1024%2C1024&ssl=1",
+      "email": "felipe@g.com",
+      "tipo": 1,
+      "cep": "85040070",
+      "id": 3
     }
   ],
   "receitas": [
@@ -38,7 +54,7 @@
       "privacidade_receita": 1
     },
     {
-      "nome": "feijao",
+      "nome": "Cesar",
       "ingredientes": "feijao",
       "foto": "https://cdn.awsli.com.br/1420/1420494/produto/89497775/f1d2fd3cfc.jpg",
       "estado_receita": 1,
@@ -53,7 +69,14 @@
       "estado_receita": 1,
       "id": 4,
       "privacidade_receita": 1
-      
+    },
+    {
+      "nome": "Sopa de feijao",
+      "ingredientes": "caldo de feijao ",
+      "foto": "https://www.receiteria.com.br/wp-content/uploads/receitas-de-misto-quente-1.jpg",
+      "estado_receita": 1,
+      "privacidade_receita": 1,
+      "id": 5
     }
   ]
 }

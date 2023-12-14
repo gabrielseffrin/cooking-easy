@@ -28,6 +28,8 @@
                     <div *ngIf="authService.isAuthenticatedUser(); else loginTemplate">
                         <!-- Conteúdo exibido quando o usuário está autenticado -->
                         <h2>Bem-vindo, {{ authService.getAuthenticatedUser() }}!</h2>
+                        <a routerLink="/aprovar-receita">Aprovar Receita</a>
+                        <br>
                         <button (click)="logout()">Logout</button>
                     </div>
                     <ng-template #loginTemplate>
