@@ -37,6 +37,7 @@ export class CadastrarReceitaComponent {
         foto: formData.foto,
         estado_receita: 2,
         privacidade_receita: 1,
+        nome_usuario: localStorage.getItem('authenticatedUser'),
       };
 
       this.http.post('http://localhost:3000/receitas', postData).subscribe(

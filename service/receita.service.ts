@@ -31,8 +31,8 @@ export class ReceitaService {
     return this.http.get<any[]>(url);
   }
 
-  getReceitasLogado(): Observable<any[]> {
-    const url = `${this.apiUrl}?id_usuario=${2}`;
+  getReceitasLogado(nome: string): Observable<any[]> {
+    const url = `${this.apiUrl}?nome_usuario=${nome}`;
     return this.http.get<any[]>(url);
   }
 
@@ -46,7 +46,11 @@ export class ReceitaService {
     return this.http.get<any[]>(url);
   }
 
-  atualizarReceita(id: number, nomeReceita: string, ingredientes: string): Observable<any> {
+  atualizarReceita(
+    id: number,
+    nomeReceita: string,
+    ingredientes: string
+  ): Observable<any> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.patch<any>(url, {
       nome: nomeReceita,

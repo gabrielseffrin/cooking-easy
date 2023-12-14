@@ -8,11 +8,12 @@ import { ReceitaService } from 'service/receita.service';
 })
 export class MinhaReceitaComponent {
   listaDeReceitas: any[] = [];
+  nomelogado: any = localStorage.getItem('authenticatedUser');
 
   constructor(private ReceitaService: ReceitaService) {}
 
   ngOnInit(): void {
-    this.ReceitaService.getReceitasLogado().subscribe((data) => {
+    this.ReceitaService.getReceitasLogado(this.nomelogado).subscribe((data) => {
       this.listaDeReceitas = data;
     });
   }
